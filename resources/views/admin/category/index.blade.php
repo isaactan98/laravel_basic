@@ -6,7 +6,6 @@
     </x-slot>
 
     <div class="py-12">
-
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -44,7 +43,7 @@
                                     </td>
                                     <td>
                                         <a href="{{url('category/edit/'.$cat->id)}}" class="btn btn-info">Edit</a>
-                                        <a href="" class="btn btn-danger">Delete</a>
+                                        <a href="{{url('softdel/category/'.$cat->id)}}" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -70,6 +69,52 @@
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Trash Category</div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">SL No</th>
+                                    <th scope="col">Category Name</th>
+                                    <th scope="col">User</th>
+                                    <th scope="col">Create At</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($trashCat as $trash)
+                                <tr>
+                                    <th scope="row"> {{$trashCat->firstItem()+$loop->index}} </th>
+                                    <td> {{$trash->category_name}} </th>
+                                    <td> {{$trash->user->name}} </td>
+                                    <td>
+                                        @if ($trash->created_at!=NULL)
+                                        {{$trash->created_at->diffForHumans()}}
+                                        @else
+                                        <span class="text-danger">No Date</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <a href="{{url('category/restore/'.$trash->id)}}" class="btn btn-info">Restore</a>
+                                        <a href="{{url('category/delete/'.$trash->id)}}" class="btn btn-danger">P-Delete</a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        {{$trashCat->links()}}
+                    </div>
+                </div>
+                <div class="col-md-4">
                 </div>
             </div>
         </div>
