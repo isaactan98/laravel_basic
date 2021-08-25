@@ -43,7 +43,7 @@
                                     </td>
                                     <td>
                                         <a href="{{url('brand/edit/'.$brd->id)}}" class="btn btn-info">Edit</a>
-                                        <a href="{{url('brand/delete/'.$brd->id)}}" class="btn btn-danger">Delete</a>
+                                        <a href="{{url('brand/delete/'.$brd->id)}}" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                                 @endforeach
