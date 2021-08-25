@@ -593,7 +593,7 @@
                             <td>
                                 <div class="media">
                                     <div class="media-image mr-3 rounded-circle">
-                                        <a href="profile.html"><img class="rounded-circle w-45" src="assets/img/user/u1.jpg" alt="customer image"></a>
+                                        <a href="profile.html"><img class="rounded-circle w-45" src="{{asset('backend/assets/img/user/u1.jpg')}}" alt="customer image"></a>
                                     </div>
                                     <div class="media-body align-self-center">
                                         <a href="profile.html">
@@ -610,7 +610,7 @@
                             <td>
                                 <div class="media">
                                     <div class="media-image mr-3 rounded-circle">
-                                        <a href="profile.html"><img class="rounded-circle w-45" src="assets/img/user/u2.jpg" alt="customer image"></a>
+                                        <a href="profile.html"><img class="rounded-circle w-45" src="{{asset('backend/assets/img/user/u2.jpg')}}" alt="customer image"></a>
                                     </div>
                                     <div class="media-body align-self-center">
                                         <a href="profile.html">
@@ -627,7 +627,7 @@
                             <td>
                                 <div class="media">
                                     <div class="media-image mr-3 rounded-circle">
-                                        <a href="profile.html"><img class="rounded-circle w-45" src="assets/img/user/u3.jpg" alt="customer image"></a>
+                                        <a href="profile.html"><img class="rounded-circle w-45" src="{{asset('backend/assets/img/user/u3.jpg')}}" alt="customer image"></a>
                                     </div>
                                     <div class="media-body align-self-center">
                                         <a href="profile.html">
@@ -644,7 +644,7 @@
                             <td>
                                 <div class="media">
                                     <div class="media-image mr-3 rounded-circle">
-                                        <a href="profile.html"><img class="rounded-circle w-45" src="assets/img/user/u4.jpg" alt="customer image"></a>
+                                        <a href="profile.html"><img class="rounded-circle w-45" src="{{asset('backend/assets/img/user/u4.jpg')}}" alt="customer image"></a>
                                     </div>
                                     <div class="media-body align-self-center">
                                         <a href="profile.html">
@@ -661,7 +661,7 @@
                             <td>
                                 <div class="media">
                                     <div class="media-image mr-3 rounded-circle">
-                                        <a href="profile.html"><img class="rounded-circle w-45" src="assets/img/user/u5.jpg" alt="customer image"></a>
+                                        <a href="profile.html"><img class="rounded-circle w-45" src="{{asset('backend/assets/img/user/u5.jpg')}}" alt="customer image"></a>
                                     </div>
                                     <div class="media-body align-self-center">
                                         <a href="profile.html">
@@ -702,7 +702,7 @@
             <div class="card-body py-0">
                 <div class="media d-flex mb-5">
                     <div class="media-image align-self-center mr-3 rounded">
-                        <a href="#"><img src="assets/img/products/p1.jpg" alt="customer image"></a>
+                        <a href="#"><img src="{{asset('backend/assets/img/products/p1.jpg')}}" alt="customer image"></a>
                     </div>
                     <div class="media-body align-self-center">
                         <a href="#">
@@ -719,7 +719,7 @@
 
                 <div class="media d-flex mb-5">
                     <div class="media-image align-self-center mr-3 rounded">
-                        <a href="#"><img src="assets/img/products/p2.jpg" alt="customer image"></a>
+                        <a href="#"><img src="{{asset('backend/assets/img/products/p2.jpg')}}" alt="customer image"></a>
                     </div>
                     <div class="media-body align-self-center">
                         <a href="#">
@@ -736,7 +736,7 @@
 
                 <div class="media d-flex mb-5">
                     <div class="media-image align-self-center mr-3 rounded">
-                        <a href="#"><img src="assets/img/products/p3.jpg" alt="customer image"></a>
+                        <a href="#"><img src="{{asset('backend/assets/img/products/p3.jpg')}}" alt="customer image"></a>
                     </div>
                     <div class="media-body align-self-center">
                         <a href="#">
