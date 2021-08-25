@@ -45,6 +45,9 @@ Route::get('/multi/img', [BrandController::class, 'multiIMG'])->name('multi.img'
 Route::post('/multi/add', [BrandController::class, 'multiADD'])->name('store.multiIMG');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    $users = User::all();
-    return view('dashboard', compact('users'));
+    // $users = User::all();
+    // return view('dashboard', compact('users'));
+    return view('admin.index');
 })->name('dashboard');
+
+Route::get('/user/logout', [BrandController::class, 'logout'])->name('user.logout');

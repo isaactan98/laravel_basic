@@ -6,6 +6,8 @@ use App\Models\Brand;
 use App\Models\MultiPic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\Facades\Image as Image;
 
 class BrandController extends Controller
@@ -13,6 +15,12 @@ class BrandController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return Redirect()->route('login')->with('success', 'Logout Success');
     }
 
     public function index()
