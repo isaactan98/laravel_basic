@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SliderController;
 use App\Models\Brand;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -45,6 +46,11 @@ Route::get('/brand/delete/{id}', [BrandController::class, 'delete']);
 //Multiple IMG 
 Route::get('/multi/img', [BrandController::class, 'multiIMG'])->name('multi.img');
 Route::post('/multi/add', [BrandController::class, 'multiADD'])->name('store.multiIMG');
+
+//Slider
+Route::get('/slider/all', [SliderController::class, 'index'])->name('home.slider');
+Route::get('/slider/add', [SliderController::class, 'add'])->name('store.slider');
+Route::post('/slider/store', [SliderController::class, 'store'])->name('add.slider');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // $users = User::all();
